@@ -12,9 +12,9 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Country.timestamp, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var items: FetchedResults<Country>
 
     var body: some View {
         NavigationView {
@@ -26,14 +26,14 @@ struct ContentView: View {
                         Text(item.timestamp!, formatter: itemFormatter)
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: deleteCountry)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button(action: addCountry) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
@@ -42,9 +42,9 @@ struct ContentView: View {
         }
     }
 
-    private func addItem() {
+    private func addCountry() {
         withAnimation {
-            let newItem = Item(context: viewContext)
+            let newItem = Country(context: viewContext)
             newItem.timestamp = Date()
 
             do {
@@ -58,7 +58,7 @@ struct ContentView: View {
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    private func deleteCountry(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
 
