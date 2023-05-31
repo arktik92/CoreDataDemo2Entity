@@ -11,5 +11,8 @@ import CoreData
 
 @objc(City)
 public class City: NSManagedObject {
-
+    public var wrappedName: String {
+        name ?? "Unknown city"
+    }
 }
+

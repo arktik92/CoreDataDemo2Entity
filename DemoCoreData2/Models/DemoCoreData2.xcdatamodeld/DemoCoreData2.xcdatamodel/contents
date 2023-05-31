@@ -5,9 +5,10 @@
         <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="city" inverseEntity="Country"/>
     </entity>
     <entity name="Country" representedClassName="Country" syncable="YES">
+        <attribute name="countryCode" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="city" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City" inverseName="country" inverseEntity="City"/>
+        <relationship name="city" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="City" inverseName="country" inverseEntity="City"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name"/>

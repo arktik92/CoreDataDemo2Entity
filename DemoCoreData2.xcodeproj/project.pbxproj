@@ -13,6 +13,14 @@
 		F2CD561B2A25F11300EF7C9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2CD561A2A25F11300EF7C9B /* Preview Assets.xcassets */; };
 		F2CD561D2A25F11300EF7C9B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD561C2A25F11300EF7C9B /* Persistence.swift */; };
 		F2CD56202A25F11300EF7C9B /* DemoCoreData2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2CD561E2A25F11300EF7C9B /* DemoCoreData2.xcdatamodeld */; };
+		F2CD562A2A25F27E00EF7C9B /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD56262A25F27E00EF7C9B /* Country+CoreDataClass.swift */; };
+		F2CD562B2A25F27E00EF7C9B /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD56272A25F27E00EF7C9B /* Country+CoreDataProperties.swift */; };
+		F2CD562C2A25F27E00EF7C9B /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD56282A25F27E00EF7C9B /* City+CoreDataClass.swift */; };
+		F2CD562D2A25F27E00EF7C9B /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD56292A25F27E00EF7C9B /* City+CoreDataProperties.swift */; };
+		F2CD56332A25FA3600EF7C9B /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD56322A25FA3600EF7C9B /* CountryDetailView.swift */; };
+		F2CD56362A25FAD500EF7C9B /* AddCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD56352A25FAD500EF7C9B /* AddCountryView.swift */; };
+		F2CD56382A26010900EF7C9B /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD56372A26010900EF7C9B /* CountryViewModel.swift */; };
+		F2CD563A2A2620EC00EF7C9B /* AddCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CD56392A2620EC00EF7C9B /* AddCityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +31,14 @@
 		F2CD561A2A25F11300EF7C9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2CD561C2A25F11300EF7C9B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F2CD561F2A25F11300EF7C9B /* DemoCoreData2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoCoreData2.xcdatamodel; sourceTree = "<group>"; };
+		F2CD56262A25F27E00EF7C9B /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2CD56272A25F27E00EF7C9B /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F2CD56282A25F27E00EF7C9B /* City+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F2CD56292A25F27E00EF7C9B /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F2CD56322A25FA3600EF7C9B /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
+		F2CD56352A25FAD500EF7C9B /* AddCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountryView.swift; sourceTree = "<group>"; };
+		F2CD56372A26010900EF7C9B /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
+		F2CD56392A2620EC00EF7C9B /* AddCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				F2CD56132A25F11100EF7C9B /* DemoCoreData2App.swift */,
-				F2CD56152A25F11100EF7C9B /* ContentView.swift */,
+				F2CD562F2A25F8C000EF7C9B /* Views */,
+				F2CD56342A25FA9D00EF7C9B /* ViewModels */,
+				F2CD562E2A25F2F700EF7C9B /* Models */,
 				F2CD56172A25F11300EF7C9B /* Assets.xcassets */,
-				F2CD561C2A25F11300EF7C9B /* Persistence.swift */,
-				F2CD561E2A25F11300EF7C9B /* DemoCoreData2.xcdatamodeld */,
 				F2CD56192A25F11300EF7C9B /* Preview Content */,
 			);
 			path = DemoCoreData2;
@@ -71,6 +87,38 @@
 				F2CD561A2A25F11300EF7C9B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F2CD562E2A25F2F700EF7C9B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F2CD561C2A25F11300EF7C9B /* Persistence.swift */,
+				F2CD561E2A25F11300EF7C9B /* DemoCoreData2.xcdatamodeld */,
+				F2CD56262A25F27E00EF7C9B /* Country+CoreDataClass.swift */,
+				F2CD56272A25F27E00EF7C9B /* Country+CoreDataProperties.swift */,
+				F2CD56282A25F27E00EF7C9B /* City+CoreDataClass.swift */,
+				F2CD56292A25F27E00EF7C9B /* City+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2CD562F2A25F8C000EF7C9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2CD56152A25F11100EF7C9B /* ContentView.swift */,
+				F2CD56352A25FAD500EF7C9B /* AddCountryView.swift */,
+				F2CD56392A2620EC00EF7C9B /* AddCityView.swift */,
+				F2CD56322A25FA3600EF7C9B /* CountryDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2CD56342A25FA9D00EF7C9B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F2CD56372A26010900EF7C9B /* CountryViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +165,8 @@
 				Base,
 			);
 			mainGroup = F2CD56072A25F11100EF7C9B;
+			packageReferences = (
+			);
 			productRefGroup = F2CD56112A25F11100EF7C9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,7 +195,15 @@
 			files = (
 				F2CD56202A25F11300EF7C9B /* DemoCoreData2.xcdatamodeld in Sources */,
 				F2CD561D2A25F11300EF7C9B /* Persistence.swift in Sources */,
+				F2CD562B2A25F27E00EF7C9B /* Country+CoreDataProperties.swift in Sources */,
 				F2CD56162A25F11100EF7C9B /* ContentView.swift in Sources */,
+				F2CD56332A25FA3600EF7C9B /* CountryDetailView.swift in Sources */,
+				F2CD562D2A25F27E00EF7C9B /* City+CoreDataProperties.swift in Sources */,
+				F2CD562A2A25F27E00EF7C9B /* Country+CoreDataClass.swift in Sources */,
+				F2CD562C2A25F27E00EF7C9B /* City+CoreDataClass.swift in Sources */,
+				F2CD56362A25FAD500EF7C9B /* AddCountryView.swift in Sources */,
+				F2CD563A2A2620EC00EF7C9B /* AddCityView.swift in Sources */,
+				F2CD56382A26010900EF7C9B /* CountryViewModel.swift in Sources */,
 				F2CD56142A25F11100EF7C9B /* DemoCoreData2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

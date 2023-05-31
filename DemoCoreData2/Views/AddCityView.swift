@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct AddCityView: View {
+    // CoreData
+    @Environment(\.managedObjectContext) private var moc
+    @Environment(\.dismiss) private var dismiss
+    
+    @ObservedObject var vm = CountryViewModel()
+    var country: Country
+    @State var cityName: String = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Form {
+                TextField("Name", text: $cityName)
+            }
+            Button {
+                vm.addCity(moc: moc, country: country, cityName: cityName)
+                dismiss()
+            } label: {
+                Text("Save")
+            }
+
+        }
+        
     }
 }
 
-struct AddCityView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddCityView()
-    }
-}
